@@ -1,4 +1,4 @@
-# RAG System for Bangla and English MCQ Extraction and Answering
+# RAG pipeline
 
 I developed this Retrieval-Augmented Generation (RAG) system to automatically extract and answer multiple-choice questions (MCQs) from Bangla and English educational PDFs. The pipeline is designed to run fully on Google Colab, making it accessible for users with limited resources.
 
@@ -73,7 +73,7 @@ The current version runs in notebook mode. If turned into an API, the endpoint w
 ## Answers to Required Questions
 
 **What method or library did I use to extract text, and why?**  
-I used pytesseract because it handles Bangla and English OCR well and is easy to integrate in Python. Formatting challenges were common—Bangla texts with poor scan quality produced noisy OCR, and multi-column layouts sometimes got mixed up.
+I used pytesseract because it handles Bangla and English OCR well and is easy to integrate in Python. Formatting challenges were common, Bangla texts with poor scan quality produced noisy OCR, and multi-column layouts sometimes got mixed up.
 
 **What chunking strategy did I choose and why?**  
 I used sentence-based chunking with overlapping windows. This works well for semantic retrieval because it preserves the flow and meaning better than fixed-length or paragraph chunks. It reduces the risk of breaking questions or answers midway.
